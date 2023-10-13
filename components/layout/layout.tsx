@@ -1,14 +1,14 @@
 import React, { FC, Fragment, ReactNode } from "react";
-import MainHeader from "./main-header";
+import MainNavigation from "./main-navigation";
 
-export type LayoutType = {
+export type LayoutProps = {
   children: ReactNode;
 };
-const Layout: FC<LayoutType> = ({ children }) => {
+const Layout: FC<LayoutProps> = (props) => {
   return (
     <Fragment>
-      <MainHeader />
-      <main>{children}</main>
+      <MainNavigation />
+      {props.children}
     </Fragment>
   );
 };
